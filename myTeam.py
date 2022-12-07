@@ -121,16 +121,7 @@ class OffensiveReflexAgent(ReflexCaptureAgent):
   but it is by no means the best or only way to build an offensive agent.
   """
     def chooseAction(self, game_state):
-        '''
-        Choose the best action using MCT techniques combined with goal
-        regonition, we split the whole process into five states using 
-        different features of techniques to choose action.
-        1. Go to Food state
-        2. Eat Food state
-        3. Find Capsule state
-        4. Power State
-        5. Go home state
-        '''
+        
         self.noFoodTime = 0
         
         RemainingFood = len(self.get_food(game_state).as_list())  # We get the remain food as a list
