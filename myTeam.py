@@ -189,7 +189,7 @@ class DefensiveReflexAgent(ReflexCaptureAgent):
     could be like.  It is not the best or only way to make
     such an agent.
     """
-    def chooseAction(self, game_state)
+    def chooseAction(self, game_state):
         self.detectDest = []
         self.initFood = self.get_food_you_are_defending(game_state).as_list()  # We get the initial food
         actions = game_state.getLegalActions(self.index) 
@@ -250,7 +250,7 @@ class DefensiveReflexAgent(ReflexCaptureAgent):
             priority = NextCost + heuristic  # Then, we update the priority by using the heuristic 
             PriorityQueue.push(SuccesorState, priority) # And, we push the Successor and this priority to the queue
 
-    def Heuristic(self, location, destin)  # The heuristic we have applied is just optimising the distance to the final destination by using the manhattanDistance from util
+    def Heuristic(self, location, destin):  # The heuristic we have applied is just optimising the distance to the final destination by using the manhattanDistance from util
         from util import manhattanDistance
         distance = manhattanDistance(location, destin)
         return distance
